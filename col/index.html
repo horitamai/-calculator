@@ -8,8 +8,7 @@
 </head>
 
 <body>
-
-
+<script type="text/javascript" src="javascript.js"></script>
 </body>
 <form name="calculator">
 <table border="1">
@@ -20,31 +19,31 @@
     <td><input type="button" value="CE" class="btn1"></td>
     <td><input type="button" value="C" class="btn1"></td>
     <td><input type="button" value="☒" class="btn1"></td>
-    <td><input type="button" value="÷" class="btn1"></td>
+    <td><input type="button" value="÷" onClick="calc_run('/')" class="btn1"></td>
   </tr>
   <tr>
-    <td><input type="button" value="7" class="btn2"></td>
-    <td><input type="button" value="8" class="btn2"></td>
-    <td><input type="button" value="9" class="btn2"></td>
-    <td><input type="button" value="×" class="btn1"></td>
+    <td><input type="button" value="7" onClick="calc_run(7)" class="btn2"></td>
+    <td><input type="button" value="8" onClick="calc_run(8)" class="btn2"></td>
+    <td><input type="button" value="9" onClick="calc_run(9)" class="btn2"></td>
+    <td><input type="button" value="×" onClick="calc_run('*')" class="btn1"></td>
   </tr>
   <tr>
-    <td><input type="button" value="4" class="btn2"></td>
-    <td><input type="button" value="5" class="btn2"></td>
-    <td><input type="button" value="6" class="btn2"></td>
-    <td><input type="button" value="－" class="btn1"></td>
+    <td><input type="button" value="4" onClick="calc_run(4)" class="btn2"></td>
+    <td><input type="button" value="5" onClick="calc_run(5)" class="btn2"></td>
+    <td><input type="button" value="6" onClick="calc_run(6)" class="btn2"></td>
+    <td><input type="button" value="－" onClick="calc_run('-')" class="btn1"></td>
   </tr>
   <tr>
-    <td><input type="button" value="1" class="btn2"></td>
-    <td><input type="button" value="2" class="btn2"></td>
-    <td><input type="button" value="3" class="btn2"></td>
-    <td><input type="button" value="＋" class="btn1"></td>
+    <td><input type="button" value="1" onClick="calc_run(1)" class="btn2"></td>
+    <td><input type="button" value="2" onClick="calc_run(2)" class="btn2"></td>
+    <td><input type="button" value="3" onClick="calc_run(3)" class="btn2"></td>
+    <td><input type="button" value="＋" onClick="calc_run('+')" class="btn1"></td>
   </tr>
   <tr>
-    <td><input type="button" value="±" class="btn1"></td>
-    <td><input type="button" value="0" class="btn2"></td>
-    <td><input type="button" value="." class="btn2"></td>
-    <td><input type="button" value="=" class="btn1"></td>
+    <td><input type="button" value="±" onClick="calc_run('±')" class="btn1"></td>
+    <td><input type="button" value="0" onClick="calc_run(0)" class="btn2"></td>
+    <td><input type="button" value="." onClick="calc_run('.')" class="btn2"></td>
+    <td><input type="button" value="=" onClick="calc_run('=')" class="btn1"></td>
   </tr>
 </table>
 </form>
