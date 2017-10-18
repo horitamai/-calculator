@@ -1,54 +1,32 @@
-ans = 0;
+total = 0;
 num = "0";
-key = "";
-kigou = "";
+point = "";
+sym = "";
 
 function calc_run(btn) {
 	if (!isNaN(btn)) {
-		if (kigou == "=") {
-			ans = 0;
-			kigou = "";
-		}
-		if (!isNaN(key)) {
-			if (num == "0") {
-				num = ""+btn;
-			} else {
-				num += ""+btn;
-			}
-		} else {
-			num = ""+btn;
-		}
-		document.getElementById("output").innerHTML = num;
-	} else {
-		if (!isNaN(key)) {
-			ans = eval(ans + kigou + num);
-			num = "0";
-			document.getElementById("output").innerHTML = ans;
-		}
-		kigou = btn;
+	if (sym == "=") {
+		total = 0;
+		sym = "";
 	}
-	document.getElementById("type").innerHTML = kigou;
-	key = btn;
-}
-
-function calc_period() {
-	if (num.indexOf(".") < 0) num += ".";
-	key = 0;
+	if (!isNaN(point)) {
+	if (num == "0") {
+		num = ""+btn;
+	} else {
+		num += ""+btn;
+	}
+	} else {
+		num = ""+btn;
+	}
 	document.getElementById("output").innerHTML = num;
-}
-
-function calc_equal() {
-	document.title = key + "=" + ":" + ans + "[" + kigou + "]" + num;
-	if (key == "=") {
-		ans = 0;
-		key = "";
 	} else {
-		if (kigou == "") ans = num;
-		else ans = eval(ans + kigou + num);
-		key = "=";
+		if (!isNaN(point)) {
+		total = eval(total + sym + num);
+		num = "0";
+		document.getElementById("output").innerHTML = total;
 	}
-	num = "0";
-	kigou = key;
-	document.getElementById("output").innerHTML = ans;
-	document.getElementById("type").innerHTML = key;
+	sym = btn;
+	}
+	document.getElementById("type").innerHTML = sym;
+	point = btn;
 }
